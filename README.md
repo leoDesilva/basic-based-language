@@ -36,11 +36,7 @@ func <name> (<inputs>) -> <expr>
 
 set = variale
 
-< = less than
-
-> = greater than
-
->=, <=, ==
+<, >,  >=, <=, ==
 
 and, or, not
 
