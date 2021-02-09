@@ -26,37 +26,37 @@ if <condition> then <expr> elif <condition> then <expr> else <expr>
 func  count_10_more (num) -> for set i = 0 to 11 then print(set num = num + 1)
 func <name> (<inputs>) -> <expr>
 
-^ = power\
+^ = power
 
-* = multiply\
+* = multiply
 
-/ =  divide\
+/ =  divide
 
-() = parenthesis\
+() = parenthesis
 
-set = variale\
+set = variale
 
-< = less than\
+< = less than
 
-> = greater than\
+> = greater than
 
->=, <=, ==\
+>=, <=, ==
 
-and, or, not\
+and, or, not
 
-true = 1\
+true = 1
 
-false = 0\
+false = 0
 
-if <expression>\
+if <expression>
   
-then <expression>\
+then <expression>
   
-elif <expression>\
+elif <expression>
   
-else <expression>\
+else <expression>
   
-func \
+func 
 
 print(<expr>)
 print_ret(<expr>) = print and return
