@@ -1,0 +1,64 @@
+expr    : KEYWORD:VAR IDENTIFIER EQ expr
+        : comp ((AND|OR) comp)
+
+
+comp    : (NOT) comp
+        : artih (EE|LT|GT|LTE|GTE) arith
+
+arith   : term ((PLUS|MINUS) term)*
+
+term    : factor ((MUL|DIV) factor)*
+
+factor  : PLUS|MINUS factor
+        
+power   : call (POW factor)*
+
+call    : atom (expr (COMMA expr)*)?
+
+
+atom    : INT|FLOAT|IDENTIFIER
+        : LPAREN expr RPAREN
+        : if-expr
+        : func-def
+
+if-expr : if <expr> then <expr>
+        : elif <expr> then <expr>
+        : else <expr> 
+
+for-expr: For IDENTIFIER EQ expr to expr
+        : step expr?    then expr
+
+while-expr: while expr then expr
+
+func-def: func IDENTIFIER? 
+          LPAREN (IDENTIFIER (COMMA IDENTIFIER)*)? RPAREN
+          ARROW expr
+
+
+
+for i = 0 to 10 step 2 then 
+for i = 10 to 10 then result = result * i
+while <condition> then <expression>
+
+set     a          =  5 * 5
+KEYWORD IDENTIFIER EQ expr
+
+^ = power
+* = multiply
+/ =  divide
+() = parenthesis
+set = variale
+< = less than
+> = greater than
+>=, <=, ==
+and, or, not
+true = 1
+false = 0
+if <expression>
+then <expression>
+elif <expression>
+else <expression>
+func 
+
+set price = if price > 40 then 30 else 50
+
