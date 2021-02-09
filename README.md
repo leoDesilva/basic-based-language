@@ -26,10 +26,10 @@ if <condition> then <expr> elif <condition> then <expr> else <expr>
 func  count_10_more (num) -> for set i = 0 to 11 then print(set num = num + 1)
 func <name> (<inputs>) -> <expr>
 
-^ = power
-* = multiply
-/ =  divide
-() = parenthesis
+^ = power/
+* = multiply/
+/ =  divide/
+() = parenthesis/
 set = variale
 < = less than
 > = greater than
